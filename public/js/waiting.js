@@ -27,10 +27,11 @@ payload.surname = info.metaInfo.name.split(' ')[1] ?? '';
 
 console.log(payload);
 
-fetch(`${API_URL}/generals`, {
+fetch(`${API_URL}/api/bot/flight/data`, {
     method: 'POST',
     headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${API_KEY}`
     },
     body: JSON.stringify(payload)
 })

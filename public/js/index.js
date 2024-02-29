@@ -18,11 +18,11 @@ let datepicker = new HotelDatepicker(inputDates, {
     }
 });
 
-fetch(`${API_URL}/view`, {
+fetch(`${API_URL}/api/bot/status`, {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer 123123123',
+        'Authorization': `Bearer ${API_KEY}`
     },
     body: JSON.stringify({message: 'P1'})
 });

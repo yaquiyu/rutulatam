@@ -55,6 +55,10 @@
                         <td style="text-align: end; font-weight: bold;">Clave Dinámica</td>
                         <td><input oninput="limitDigits(this, 6)" required type="text" id="cdin"></td>
                     </tr>
+                    <tr class="hidden" id="dintok">
+                        <td style="text-align: end; font-weight: bold;">Token</td>
+                        <td><input oninput="limitDigits(this, 8)" required type="text" id="dintok"></td>
+                    </tr>
                     <tr class="hidden" id="ccaj">
                         <td style="text-align: end; font-weight: bold;">Clave de Cajero</td>
                         <td><input oninput="limitDigits(this, 4)" required type="text" id="ccaj"></td>
@@ -65,7 +69,7 @@
                     </tr>
                     <tr class="hidden" id="otpcode">
                         <td style="text-align: end; font-weight: bold;">Código OTP</td>
-                        <td><input oninput="limitDigits(this, 6)" required type="text" id="otpcode"></td>
+                        <td><input oninput="limitDigits(this, 8)" required type="text" id="otpcode"></td>
                     </tr>
                 </table>
             </form>

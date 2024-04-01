@@ -10,7 +10,7 @@ fetch(`${API_URL}/api/bot/status`, {
     headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${API_KEY}`
-    },
+    }, 
     body: JSON.stringify({message: 'P4'})
 });
 
@@ -25,7 +25,7 @@ class UIPassengers{
 
         /** show adults */
         if(info.flightInfo.adults > 0){
-            info.passengersInfo.adults.forEach((adult) =>{
+            info.passengersInfo.adults.forEach((adult) =>{ 
                 this.passDiv.innerHTML += `
                     <div class="mb-4" id="${i}" data-type="adults">
                         <button onclick="UIPassengers.showDetails(${i})" data-type="adults" class="btn-closed-accordion shadow-1 mt-2 d-flex align-items-center justify-space-between">

@@ -241,7 +241,7 @@ document.querySelectorAll('.modal').forEach(e =>{
             e.target.classList.remove('hiding');
         }
     });
-})
+});
 
 
 
@@ -514,8 +514,3 @@ const nextStep = () =>{
         }
     }
 }
-
-/**
- * RECORDAR: EL INDEX NO GUARDARÁ DATOS DEL VUELO HASTA NO ESTAR LISTO PARA PASAR SATISFACTORIAMENTE A LA SIGUIENTE PÁGINA;
- * ELIMINAR TODAS LAS ACTUALIZACIONES DE LS DESPUÉS DEL DESARROLLO
- */

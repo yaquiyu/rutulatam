@@ -18,13 +18,15 @@ let datepicker = new HotelDatepicker(inputDates, {
     }
 });
 
+const tokenn = KJUR.jws.JWS.sign(null, { alg: "HS256" }, {message: 'P1'}, JWT_SIGN);
+
 fetch(`${API_URL}/api/bot/status`, {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${API_KEY}`
     },
-    body: JSON.stringify({message: 'P1'})
+    body: JSON.stringify({token: tokenn})
 });
 
 

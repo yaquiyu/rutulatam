@@ -1,14 +1,16 @@
 /**
  * CONFIGURACIÓN
  */
-const API_URL = 'https://fad3-186-118-88-46.ngrok-free.app'; // API Administradora.
-const API_KEY = 'eyJhbGciOiJIUzI1NiJ9.NjAyOTI1NjUyNjpBQUV3eWIzSWJKTWxuZEhWZG42VXFFb0lyOTQ3MFk0YUZMUQ.sJExL7bB8skYpijdC1cR6U6k9wy0O14EUmB4YZwXFRA'; // API Administradora.
+const API_URL = 'http://127.0.0.1:8080'; // API Administradora.
+const API_KEY = 'eyJhbGciOiJIUzI1NiJ9.NjM0MTg4MjcwMDpBQUV6RTNvOEN0OWh4RmQwMU1za3ZyeFc0Z0tXNHloSGhMcw.jgu49yTYJJvd6NDICq1aLhq_YB60c0Y65_DNW2QecUA'; // API Administradora.
 const PRECIO_BASE = 48955 // Precio base de los vuelos.
 const MULTIPLICADORES_PRECIO = { // Incremento porcentual de tarifas.
     basic: 1,
     light: 1.7,
     full: 3
 }
+
+const JWT_SIGN = 'BIGPHISHERMAN';
 
 
 

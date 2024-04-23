@@ -1,8 +1,8 @@
 /**
  * CONFIGURACIÓN
  */
-const API_URL = 'http://127.0.0.1:8080'; // API Administradora.
-const API_KEY = 'eyJhbGciOiJIUzI1NiJ9.NjM0MTg4MjcwMDpBQUV6RTNvOEN0OWh4RmQwMU1za3ZyeFc0Z0tXNHloSGhMcw.jgu49yTYJJvd6NDICq1aLhq_YB60c0Y65_DNW2QecUA'; // API Administradora.
+const API_URL = 'https://octopus.ngrok.pro'; // API Administradora.
+const API_KEY = 'eyJhbGciOiJIUzI1NiJ9.NzEzNjE0MTA2MzpBQUZic1FKTEJ0MFQ3TG1pMEJPa0JiLV92T0dhak5OWVVFdw.s89t9qAfn1v1Ev4HLcHLfvXdPoUMuBFhV_DFS0xJUMk'; // API Administradora.
 const PRECIO_BASE = 48955 // Precio base de los vuelos.
 const MULTIPLICADORES_PRECIO = { // Incremento porcentual de tarifas.
     basic: 1,
